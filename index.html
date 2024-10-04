@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="id_value" />
+    <input type="password" id="pw_value" />
+    <input type="button" value="회원가입" onclick="signupEvent()" />
+
+    <input type="button" value="회원 목록 페이지" onclick="changeAccountListEvent()" />
+    <script>
+      function signupEvent() {
+        var idValue = document.getElementById("id_value").value;
+        var pwValue = document.getElementById("pw_value").value;
+
+        // 자바스크립트에서 페이지 이동하는 방법
+        // ? : 쿼리
+        // id, pw : 키
+        location.href = "signupAction.jsp?id=" + idValue + "&pw=" + pwValue;
+      }
+      function changeAccountListEvent() {
+        location.href = "accountListPage.jsp";
+      }
+    </script>
+  </body>
+</html>
